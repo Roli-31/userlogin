@@ -18,6 +18,9 @@ log_user=LoginUser()
 pass_chng=PassUpdate()
 deact=deactivate()
 
+@app.route('/health',methods=['GET'])
+def healthapi():
+    return "server is up"
 
 @app.route('/user_db',methods=['POST'])
 def userinfoapi():
